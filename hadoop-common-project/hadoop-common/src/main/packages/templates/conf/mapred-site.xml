@@ -82,7 +82,7 @@
 
   <property>
     <name>jetty.connector</name>
-    <value>org.mortbay.jetty.nio.SelectChannelConnector</value>
+    <value>org.eclipse.jetty.server.nio.SelectChannelConnector</value>
   </property>
 
   <property>

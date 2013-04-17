@@ -28,7 +28,7 @@ import org.apache.hadoop.hdfs.DFSConfigKeys;
 import org.apache.hadoop.hdfs.server.common.HdfsServerConstants;
 import org.apache.hadoop.http.HttpServer;
 import org.apache.hadoop.security.UserGroupInformation;
-import org.mortbay.jetty.nio.SelectChannelConnector;
+import org.eclipse.jetty.server.nio.SelectChannelConnector;
 
 /**
  * Utility class to start a datanode in a secure cluster, first obtaining 
