@@ -142,17 +142,18 @@ public class TestShuffleExceptionCount {
    * sun.nio.ch.EPollArrayWrapper.interrupt(Native Method) at
    * sun.nio.ch.EPollArrayWrapper.interrupt(EPollArrayWrapper.java:256) at
    * sun.nio.ch.EPollSelectorImpl.wakeup(EPollSelectorImpl.java:175) at
-   * org.mortbay
+   * org.eclipse.jetty
    * .io.nio.SelectorManager$SelectSet.wakeup(SelectorManager.java:831) at
-   * org.mortbay
+   * org.eclipse.jetty
    * .io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:709) at
-   * org.mortbay.io.nio.SelectorManager.doSelect(SelectorManager.java:192) at
-   * org
-   * .mortbay.jetty.nio.SelectChannelConnector.accept(SelectChannelConnector.java
-   * :124) at
-   * org.mortbay.jetty.AbstractConnector$Acceptor.run(AbstractConnector.
+   * org.eclipse.jetty
+   * .io.nio.SelectorManager.doSelect(SelectorManager.java:192) at
+   * org.eclipse.jetty
+   * .io.nio.SelectChannelConnector.accept(SelectChannelConnector.java:124) at
+   * org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.
    * java:708) at
-   * org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool
+   * org.eclipse.jetty
+   * .util.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool
    * .java:582)
    */
   private StackTraceElement[] constructStackTrace() {
@@ -164,21 +165,21 @@ public class TestShuffleExceptionCount {
     stack[2] = new StackTraceElement("sun.nio.ch.EPollSelectorImpl", "wakeup",
         "EPollSelectorImpl.java", 175);
     stack[3] = new StackTraceElement(
-        "org.mortbay.io.nio.SelectorManager$SelectSet", "wakeup",
+        "org.eclipse.jetty.io.nio.SelectorManager$SelectSet", "wakeup",
         "SelectorManager.java", 831);
     stack[4] = new StackTraceElement(
-        "org.mortbay.io.nio.SelectorManager$SelectSet", "doSelect",
+        "org.eclipse.jetty.io.nio.SelectorManager$SelectSet", "doSelect",
         "SelectorManager.java", 709);
-    stack[5] = new StackTraceElement("org.mortbay.io.nio.SelectorManager",
+    stack[5] = new StackTraceElement("org.eclipse.jetty.io.nio.SelectorManager",
         "doSelect", "SelectorManager.java", 192);
     stack[6] = new StackTraceElement(
-        "org.mortbay.jetty.nio.SelectChannelConnector", "accept",
+        "org.eclipse.jetty.server.nio.SelectChannelConnector", "accept",
         "SelectChannelConnector.java", 124);
     stack[7] = new StackTraceElement(
-        "org.mortbay.jetty.AbstractConnector$Acceptor", "run",
+        "org.eclipse.jetty.server.AbstractConnector$Acceptor", "run",
         "AbstractConnector.java", 708);
     stack[8] = new StackTraceElement(
-        "org.mortbay.thread.QueuedThreadPool$PoolThread", "run",
+        "org.eclipse.jetty.util.thread.QueuedThreadPool$PoolThread", "run",
         "QueuedThreadPool.java", 582);
 
     return stack;
@@ -189,22 +190,24 @@ public class TestShuffleExceptionCount {
    * sun.nio.ch.EPollArrayWrapper.interrupt(Native Method) at
    * sun.nio.ch.EPollArrayWrapper.interrupt(EPollArrayWrapper.java:256) at
    * sun.nio.ch.EPollSelectorImpl.wakeup(EPollSelectorImpl.java:175) at
-   * org.mortbay
+   * org.eclipse.jetty
    * .io.nio.SelectorManager$SelectSet.wakeup(SelectorManager.java:831) at
-   * org.mortbay
+   * org.eclipse.jetty
    * .io.nio.SelectChannelEndPoint.updateKey(SelectChannelEndPoint.java:335) at
-   * org
-   * .mortbay.io.nio.SelectChannelEndPoint.blockWritable(SelectChannelEndPoint
+   * org.eclipse.jetty
+   * .io.nio.SelectChannelEndPoint.blockWritable(SelectChannelEndPoint
    * .java:278) at
-   * org.mortbay.jetty.AbstractGenerator$Output.blockForOutput(AbstractGenerator
+   * org.eclipse.jetty
+   * .http.AbstractGenerator$Output.blockForOutput(AbstractGenerator
    * .java:545) at
-   * org.mortbay.jetty.AbstractGenerator$Output.flush(AbstractGenerator
+   * org.eclipse.jetty.http.AbstractGenerator$Output.flush(AbstractGenerator
    * .java:572) at
-   * org.mortbay.jetty.HttpConnection$Output.flush(HttpConnection.java:1012) at
-   * org
-   * .mortbay.jetty.AbstractGenerator$Output.write(AbstractGenerator.java:651)at
-   * org
-   * .mortbay.jetty.AbstractGenerator$Output.write(AbstractGenerator.java:580)
+   * org.eclipse.jetty
+   * .http.AbstractHttpConnection$Output.flush(HttpConnection.java:1012) at
+   * org.eclipse.jetty
+   * .http.AbstractGenerator$Output.write(AbstractGenerator.java:651)at
+   * org.eclipse.jetty
+   * .http.AbstractGenerator$Output.write(AbstractGenerator.java:580)
    * at
    */
   private StackTraceElement[] constructStackTraceTwo() {
@@ -216,27 +219,27 @@ public class TestShuffleExceptionCount {
     stack[2] = new StackTraceElement("sun.nio.ch.EPollSelectorImpl", "wakeup",
         "EPollSelectorImpl.java", 175);
     stack[3] = new StackTraceElement(
-        "org.mortbay.io.nio.SelectorManager$SelectSet", "wakeup",
+        "org.eclipse.jetty.io.nio.SelectorManager$SelectSet", "wakeup",
         "SelectorManager.java", 831);
     stack[4] = new StackTraceElement(
-        "org.mortbay.io.nio.SelectChannelEndPoint", "updateKey",
+        "org.eclipse.jetty.io.nio.SelectChannelEndPoint", "updateKey",
         "SelectChannelEndPoint.java", 335);
     stack[5] = new StackTraceElement(
-        "org.mortbay.io.nio.SelectChannelEndPoint", "blockWritable",
+        "org.eclipse.jetty.io.nio.SelectChannelEndPoint", "blockWritable",
         "SelectChannelEndPoint.java", 278);
     stack[6] = new StackTraceElement(
-        "org.mortbay.jetty.AbstractGenerator$Output", "blockForOutput",
+        "org.eclipse.jetty.http.AbstractGenerator$Output", "blockForOutput",
         "AbstractGenerator.java", 545);
     stack[7] = new StackTraceElement(
-        "org.mortbay.jetty.AbstractGenerator$Output", "flush",
+        "org.eclipse.jetty.http.AbstractGenerator$Output", "flush",
         "AbstractGenerator.java", 572);
-    stack[8] = new StackTraceElement("org.mortbay.jetty.HttpConnection$Output",
-        "flush", "HttpConnection.java", 1012);
+    stack[8] = new StackTraceElement("org.eclipse.jetty..server.AbstractHttpConnection$Output",
+        "flush", "AbstractHttpConnection.java", 1012);
     stack[9] = new StackTraceElement(
-        "org.mortbay.jetty.AbstractGenerator$Output", "write",
+        "org.eclipse.jetty.http.AbstractGenerator$Output", "write",
         "AbstractGenerator.java", 651);
     stack[10] = new StackTraceElement(
-        "org.mortbay.jetty.AbstractGenerator$Output", "write",
+        "org.eclipse.jetty.http.AbstractGenerator$Output", "write",
         "AbstractGenerator.java", 580);
 
     return stack;

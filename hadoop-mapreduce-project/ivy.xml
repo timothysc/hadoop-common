@@ -139,7 +139,7 @@
    <dependency org="org.mockito" name="mockito-all" rev="${mockito-all.version}" 
                conf="test->default"/>
    <dependency org="org.vafer" name="jdeb" rev="${jdeb.version}" conf="package->master"/>
-   <dependency org="org.mortbay.jetty" name="jetty-servlet-tester" rev="${jetty.version}"
+   <dependency org="org.eclipse.jetty" name="test-jetty-servlet" rev="${jetty.version}"
                conf="test->default"/>
 
    <!-- dependency for rumen anonymization -->

@@ -55,7 +55,7 @@ import org.apache.hadoop.mapreduce.filecache.TrackerDistributedCacheManager.Cach
 import org.apache.hadoop.mapreduce.server.tasktracker.TTConfig;
 import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.hadoop.util.ReflectionUtils;
-import org.mortbay.log.Log;
+import org.eclipse.jetty.util.log.Log;
 
 import org.mockito.Matchers;
 import static org.mockito.Mockito.*;
